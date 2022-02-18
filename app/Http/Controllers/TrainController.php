@@ -19,9 +19,12 @@ class TrainController extends Controller
         
         
           $currentTime = Train::where('departure_day', $date)->get();
-         dd($currentTime);
+         //dd($currentTime);
         
+         $data = ['trains' => $currentTime];
         
-        return view('home');
+        return view('home', $data);
     }
+
+
 }

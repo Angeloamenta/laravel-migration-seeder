@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'TrainController@index');
+Route::get('/add', 'TrainController@add');
