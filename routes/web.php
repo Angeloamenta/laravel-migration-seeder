@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'TrainController@index');
-Route::get('/add', 'TrainController@add');
+Route::get('/trains/{train}', 'TrainController@show')->name('show');
