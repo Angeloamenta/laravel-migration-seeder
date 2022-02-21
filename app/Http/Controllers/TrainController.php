@@ -21,9 +21,23 @@ class TrainController extends Controller
           $currentTime = Train::where('departure_day', $date)->get();
          //dd($currentTime);
         
-         $data = ['trains' => $currentTime];
+        //  $data = ['trains' => $currentTime];
+        $data = ['trains' => $trains];
+
         
         return view('home', $data);
+    }
+
+      /**
+     * Display the specified resource.
+     *
+     * @param  \App\Train  $house
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Train $train) //findOrFail
+    {
+        
+        return view('train', compact('train'));
     }
 
 
